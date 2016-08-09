@@ -1,0 +1,628 @@
+/*  HTML Elements  */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article,aside,command,details,figcaption,figure,
+footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time, main{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+address,article,aside,header,footer,section,nav,menu,hgroup,figure,figcaption, main, mark{
+    display:block;  
+}
+caption,th {
+	text-align: left;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+a:hover, a:active, a:focus, a:active{
+    outline: none;
+} 
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img, iframe, fieldset {
+	border: none;
+}
+
+/* the display of screen */
+.clearfix:after{
+	content: '';
+	display:block;
+	clear:both;
+	height:0;
+	width:0;
+	overflow:hidden;
+}
+
+*, *:before, *:after{
+	box-sizing: border-box;
+}
+
+html{
+	-webkit-text-size-adjust: none;
+	-webkit-overflow-scrolling: touch;
+    -ms-overflow-style: scrollbar;
+}
+
+/* body */
+body {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #666666;
+}
+
+a,a:active,a:focus,a:visited{
+	color: #ffffff;
+	text-decoration: none;
+}
+a:hover{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* .modals */
+.modals{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	z-index: 2001;
+	display: none;
+	-webkit-box-align:center;
+	-ms-align-items:center;
+	-webkit-align-items:center;
+	align-items:center;
+	background-color:rgba(0,0,0,0.8);
+}
+	.ui-modal{
+		margin: 0 auto;
+		min-width: 200px;
+		min-height: 100px;
+	}
+    #modal-login{
+        width: 1090px;
+        height: 622px;
+    }
+        #modal-login .modal-part{
+            float: left;
+            width: 535px;
+            height: 622px;
+            background-color: #FFFFFF;
+        }
+        #modal-login .modal-part-right{
+            float: right;
+        }
+            #modal-login .modal-part h3{
+                text-align: center;
+                height: 302px;
+                background: url("../i/desktop/bg-login-1.jpg") left top no-repeat;
+                font-weight: 300;
+                font-size: 56px;
+                line-height: 58px;
+                padding: 90px 20px 0;
+            }
+            #modal-login .modal-part-right h3{
+                background: url("../i/desktop/bg-login-2.jpg") left top no-repeat;
+            }
+            #modal-login .modal-part .summary{
+                line-height: 36px;
+                font-size: 30px;
+                color: #4b4b4b;
+                padding: 35px;
+                font-weight: 300;
+                height: 220px;
+            }
+            #modal-login .modal-part .part-command{
+                text-align: center;
+            }
+                #modal-login .modal-part .part-command .btn-modal{
+                    width: 139px;
+                    height: 53px;
+                    line-height: 54px;
+                    text-transform: none;
+                    border-radius: 0;
+                    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+                }
+
+
+
+/* button */
+.btn,
+.btn:focus,
+.btn:visited{
+	padding: 0 10px;
+	border:0;
+	display: inline-block;
+	color: #fff;
+	height: 45px;
+	line-height: 46px;
+	font-size: 18px;
+	border-radius: 3px;
+	font-weight: 600;
+	text-decoration: none;
+	text-align: center;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    transition: all 400ms;
+    text-transform: uppercase;
+}
+.btn-transparent,
+.btn-transparent:focus,
+.btn-transparent:visited{
+    padding: 0 10px;
+    display: inline-block;
+    color: #fff;
+    height: 75px;
+    line-height: 75px;
+    font-size: 24px;
+    border-radius: 3px;
+    border: 2px solid #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    transition: all 400ms;
+}
+.btn-transparent:hover{
+    background-color: #236280;
+}
+
+.btn-blue{
+	background-color: #07a8f2;
+}
+.btn-blue:hover{
+    background-color: #0794d5;
+}
+.btn-login{
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* #header */
+#header{
+	height: 53px;
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+	z-index:2;
+    background-color: rgba(0,0,0,0.6);
+    padding-left: 18px;
+    padding-right: 11px;
+}
+    #header h1{
+        background: url("../i/desktop/logo.png") left top no-repeat;
+        width: 264px;
+        height: 25px;
+        margin-left: 28px;
+        margin-top: 15px;
+    }
+        #header h1 a{
+            display: block;
+            width: 264px;
+            height: 25px;
+        }
+    #header nav{
+        margin-right: 25px;
+    }
+        #header nav ul li{
+            float: left;
+            line-height: 53px;
+            margin: 0 15px;
+        }
+            #header nav ul li a{
+                display: inline-block;
+                padding: 7px 10px 0;
+                line-height: 41px;
+                border-bottom: 5px solid transparent;
+                font-weight: 600;
+                font-size: 16px;
+                color: #ffffff;
+                text-decoration: none;
+            }
+            #header nav ul li a.active,
+            #header nav ul li a:hover{
+                text-decoration: none;
+                border-bottom: 5px solid #ffffff;
+            }
+
+
+/* #main */
+#main{
+    min-height: 10px;
+}
+    #main .section{
+        overflow: hidden;
+    }
+    .section .container{
+        height: 100%;
+        display: table;
+        width: 100%;
+        padding: 0;
+    }
+        .section .container .align-middle{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+    /* #love-pets */
+    #love-pets{
+        background: url("../i/desktop/bg-1.jpg") center top no-repeat;
+        background-size: cover;
+    }
+        #love-pets .align-middle{
+            text-align: center;
+        }
+            #love-pets h2{
+                font-size: 46px;
+                font-weight: normal;
+                color: #ffffff;
+                line-height: 60px;
+                letter-spacing: -0.1px;
+                text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+            }
+            #love-pets p{
+                font-size: 70px;
+                max-width: 960px;
+                margin: 0 auto;
+                color: #ffffff;
+                line-height: 84px;
+                font-weight: 100;
+                font-style: normal;
+                letter-spacing: -0.1px;
+                text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+            }
+            #love-pets .icon-heart{
+                width: 201px;
+                height: 201px;
+                background: url("../i/desktop/icon-heart-1.png") left top no-repeat;
+                margin: 0 auto 47px;
+            }
+            #love-pets .scroll-explore{
+                cursor: pointer;
+                width: 46px;
+                height: 27px;
+                position: absolute;
+                left: 50%;
+                bottom: 33px;
+                margin-left: -23px;
+                background: url("../i/desktop/icon-arrow.png") left top no-repeat;
+            }
+
+    /* #products */
+    #products{
+        background: #dac17f url("../i/desktop/light.png") center top no-repeat;
+        background-size: cover;
+    }
+        #products h2{
+            padding-left: 30px;
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: normal;
+            color: #675424;
+        }
+        #products .img-dog{
+            position: absolute;
+            right: 4%;
+            bottom: 0;
+            width: 454px;
+            height: 711px;
+            background: url("../i/desktop/img-dog.png") center top no-repeat;
+        }
+        #products .product-info{
+            margin-left: 9%;
+            width: 560px;
+            padding-top: 54px;
+        }
+            #products .product-info .icon-products{
+                width: 560px;
+                height: 377px;
+                margin-bottom: 32px;
+                background: url("../i/desktop/product-list.png") center top no-repeat;
+            }
+            #products .product-info p{
+                margin-left: 30px;
+                padding-top: 29px;
+            }
+                #products .product-info p a{
+                    display: inline-block;
+                    padding-right: 61px;
+                    position: relative;
+                    font-size: 40px;
+                    color: #675424;
+                    font-weight: 300;
+
+                }
+                    #products .product-info p a i{
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        width: 42px;
+                        height: 42px;
+                        margin-top: -21px;
+                        background: url("../i/desktop/icon-link-1.png") left top no-repeat;
+                        -webkit-transition: all 300ms;
+                        -moz-transition: all 300ms;
+                        transition: all 300ms;
+                    }
+                    #products .product-info p a:hover i{
+                        transform: translate3d(-3px, 0, 0);
+                    }
+
+    /* #exclusive-products */
+    #exclusive-products{
+        background: #c3002f url("../i/desktop/light-red.png") center top no-repeat;
+        background-size: cover;
+    }
+        #exclusive-products .icon-exclusive-products{
+            height: 497px;
+            width: 938px;
+            margin: 0 auto;
+            background: url("../i/desktop/product-exclusive-list.png") center top no-repeat;
+        }
+        #exclusive-products h2{
+            height: 88px;
+            padding-bottom: 36px;
+            text-align: center;
+            font-size: 48px;
+            color: #ffffff;
+            font-family: Memphis, Arial, Helvetica, sans-serif;
+        }
+        #exclusive-products .banner{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 118px;
+            width: 100%;
+            background-color: #8f2829;
+            text-align: center;
+            padding-top: 38px;
+        }
+            #exclusive-products .banner:after{
+                display: block;
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -44px;
+                width: 167px;
+                height: 44px;
+                background: url("../i/desktop/banner-arrow.png") center top no-repeat;
+            }
+            #exclusive-products .banner a{
+                display: inline-block;
+                padding-right: 61px;
+                position: relative;
+                font-size: 40px;
+                color: #FFFFFF;
+                font-weight: 300;
+
+            }
+                #exclusive-products .banner a i{
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    width: 42px;
+                    height: 42px;
+                    margin-top: -21px;
+                    background: url("../i/desktop/icon-link-2.png") left top no-repeat;
+                    -webkit-transition: all 300ms;
+                    -moz-transition: all 300ms;
+                    transition: all 300ms;
+                }
+                #exclusive-products .banner a:hover i{
+                    transform: translate3d(-3px, 0, 0);
+                }
+
+
+
+    /* #infinia-products */
+    #infinia-products{
+        background: #7bb21c url("../i/desktop/light-green.png") center top no-repeat;
+        background-size: cover;
+    }
+        #infinia-products .icon-products{
+            width: 700px;
+            height: 550px;
+            position: absolute;
+            left: 6%;
+            top: 50%;
+            margin-top: -275px;
+            background: url("../i/desktop/product-infinia.png") left 88px no-repeat;
+        }
+        #infinia-products .product-info{
+            margin-left: 62%;
+            height: 550px;
+            padding-top: 88px;
+            width: 400px;
+            color: #497400;
+        }
+            #infinia-products .product-info h2{
+                font-size: 60px;
+                font-family: Avenir, Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-shadow: 0 1px 2px rgba(255,255,255,0.35);
+                line-height: 72px;
+            }
+                #infinia-products .product-info h2 b{
+                    font-size: 72px;
+                    font-weight: 700;
+                    line-height: 81px;
+                }
+            #infinia-products .product-info h3{
+                font-size: 60px;
+                font-family: Avenir, Arial, Helvetica, sans-serif;
+                font-weight: 300;
+                text-transform: uppercase;
+                line-height: 72px;
+                text-shadow: 0 1px 2px rgba(255,255,255,0.35);
+            }
+            #infinia-products .product-info p{
+                padding-top: 46px;
+                padding-left: 4px;
+            }
+                #infinia-products .product-info p a{
+                    display: inline-block;
+                    padding-right: 61px;
+                    position: relative;
+                    font-size: 40px;
+                    color: #FFFFFF;
+                    font-weight: 300;
+
+                }
+                    #infinia-products .product-info p a i{
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        width: 42px;
+                        height: 42px;
+                        margin-top: -21px;
+                        background: url("../i/desktop/icon-link-2.png") left top no-repeat;
+                        -webkit-transition: all 300ms;
+                        -moz-transition: all 300ms;
+                        transition: all 300ms;
+                    }
+                    #infinia-products .product-info p a:hover i{
+                        transform: translate3d(-3px, 0, 0);
+                    }
+
+    /* #pet-foods */
+    #pet-foods{
+        background: #7bb21c url("../i/desktop/bg-2.jpg") center top no-repeat;
+        background-size: cover;
+        padding-bottom: 99px;
+        padding-top: 53px;
+    }
+        #pet-foods .product-info{
+            padding-top: 43px;
+        }
+            #pet-foods .product-info h2{
+                font-size: 50px;
+                line-height: 60px;
+                color: #FFFFFF;
+                font-weight: 300;
+                text-align: center;
+                padding-bottom: 30px;
+            }
+            #pet-foods .product-info .row{
+                padding: 0 74px;
+                font-size: 24px;
+                line-height: 36px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+                #pet-foods .product-info .row .col{
+                    padding: 0 5%;
+                }
+                    #pet-foods .product-info .row .icon{
+                        width: 189px;
+                        height: 153px;
+                        margin: 0 auto;
+                    }
+                    #pet-foods .product-info .row .col p{
+                        padding-top: 30px;
+                    }
+                    .icon-pet-food{
+                        background: url("../i/desktop/icon-food.png") center top no-repeat;
+                    }
+                    .icon-pet-prize{
+                        background: url("../i/desktop/icon-prize.png") center 11px no-repeat;
+                    }
+                    .icon-pet-house{
+                        background: url("../i/desktop/icon-house.png") center 17px no-repeat;
+                    }
+
+
+        /* #footer */
+        #pet-foods #footer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index:999;
+        }
+        #footer{
+            height: 99px;
+            width: 100%;
+            background-color: #000000;
+            line-height: 28px;
+        }
+            #footer h2{
+                margin: 36px auto 0;
+                width: 276px;
+                height: 30px;
+                background: url("../i/desktop/logo-sub.png") left top no-repeat;
+            }
+                #footer h2 a{
+                    display: block;
+                    width: 276px;
+                    height: 30px;
+                }
+            #footer .footer-copyright{
+                position: absolute;
+                left: 20px;
+                top: 0;
+            }
+            #footer .footer-privacy{
+                position: absolute;
+                right: 20px;
+                top: 0;
+            }
+
+/* ipad portrait */
+@media only screen and (max-width: 768px){
+}
+
+/* ipad 768 */
+@media only screen and (max-width: 585px){
+}
+
+
+
